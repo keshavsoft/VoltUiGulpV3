@@ -216,28 +216,4 @@ Instagram: <https://www.instagram.com/themesberg/>
 
 ### 1.1.2
 
-- Read only changed at some places
-
-### 1.1.3
-
-- From Local Storage started
-
-### 1.1.4
-
-- Load Data To topy bar in seperate folder
-
-### 1.1.5
-
-- Load Data To top bar still working in indexV6, GroupBy
-
-### 1.1.6
-
-- From LocalStorage, Common key changed to table Name from Config json
-
-### 1.1.7
-
-- From LocalStorage, load data key changed to table Name from Config json not hard coded
-
-### 1.1.8
-
-- Vertical V1 perfect, ui sidebar parent to indexV6
+- still working on tables.json
