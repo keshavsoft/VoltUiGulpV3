@@ -1,0 +1,21 @@
+<tr>
+    <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+
+    {{#each columns}}
+    <th data-field="{{field}}"
+        {{#if align}} data-align="{{align}}" {{/if}}
+            {{#if filterControl}}data-filter-control="{{filterControl}}" {{/if}}
+                {{#if align}}data-align="{{align}}" {{/if}}
+                    {{#if showRupee}}data-formatter="window.RupeeFormatter" {{/if}}
+                        {{#if (isVisible this)}} data-visible={{visible}}{{/if}}
+                            {{#if WidthOptions.inPx}} data-width="{{WidthOptions.inPx}}" {{/if}}
+                                {{#if defaultvalue}} data-defaultvalue="{{defaultvalue}}" {{/if}}     
+                                    {{#if type}} data-type="{{type}}" {{/if}}     >
+
+        {{title}}
+    </th>
+    {{/each}}
+    <th data-field="KS-Save">
+        Options
+    </th>
+</tr>

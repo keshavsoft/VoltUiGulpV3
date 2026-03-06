@@ -1,0 +1,43 @@
+{
+    "tableName": "StockItems",
+    "columns": [
+        {
+            "field": "StockItemName",
+            "title": "StockItemName",
+            "unique": true,
+            "type": "text",
+            "isInput": true,
+            "isAutoFocus": true,
+            "defaultvalue": "KeshavSoft"
+        },
+        {
+            "field": "StockItemReservedName",
+            "title": "StockItemReservedName",
+            "type": "text",
+            "isInput": true
+        },
+        {
+            "field": "StockItemType",
+            "title": "StockItemType",
+            "type": "text",
+            "isInput": true
+        }
+    ],
+    "data": [],
+    "Vertical": [],
+    "DataTableOptions": {
+        "Header": {
+            "autoFocus": "title"
+        }
+    },
+    "SubRoutes": [
+        "Read",
+        "Insert"
+    ],
+    "NonSecured": {
+        "SubRoutes": [
+            "Read",
+            "Pipe"
+        ]
+    }
+}

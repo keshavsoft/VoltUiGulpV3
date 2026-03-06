@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "simple",
+        "DisplayName": "simple",
+        "IconClass": "bi bi-activity",
+        "SpanClass": "text-muted"
+    },
+    {
+        "Name": "fullScreen",
+        "DisplayName": "FullScreen",
+        "IconClass": "bi bi-fullscreen",
+        "SpanClass": "text-info"
+    },
+    {
+        "Name": "withAdd",
+        "DisplayName": "WithAdd",
+        "IconClass": "bi bi-file-earmark-plus",
+        "SpanClass": "text-secondary"
+    }
+]

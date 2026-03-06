@@ -1,0 +1,157 @@
+<!--
+
+=========================================================
+* Volt Free - Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> _head path="../.." title="CrateOnly"}}
+</head>
+
+<body>
+    {{> _nav path="../.."}}
+
+    {{> SideNavs/multiTable path="../.." currentPage="crateOnly" currentPageGroup="crateOnly"}}
+
+    <main class="content">
+        {{> _topbar path="../.."}}
+
+        {{> _breadCrumb path="../.." page="CrateOnly"}}
+
+        <div id="toolbar">
+            <a id="RefreshATagId" href="#"
+                class="btn d-flex justify-content-center align-items-center RefreshBSTableClass bg-gray-700 text-white"
+                style="width: 40px; height: 40px; border-radius: 50%;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"
+                    style="width: 20px; height: 20px; flex-shrink: 0;">
+                    <path
+                        d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.8 6.8 0 0 0 1.16 8z" />
+                    <path
+                        d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <form onsubmit="return false" id="FormId">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerName"
+                                class="form-label">BuyerName</label> <input type="text" class="form-control"
+                                id="HtmlId-BuyerName" name="BuyerName" autocomplete="off" autofocus value="Keshav"
+                                disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerAddress"
+                                class="form-label">BuyerAddress</label> <input type="text" class="form-control"
+                                id="HtmlId-BuyerAddress" name="BuyerAddress" autocomplete="off" autofocus disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerGST"
+                                class="form-label">BuyerGST</label> <input type="text" class="form-control"
+                                id="HtmlId-BuyerGST" name="BuyerGST" autocomplete="off" autofocus disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceNo"
+                                class="form-label">InvoiceNo</label> <input type="text" class="form-control"
+                                id="HtmlId-InvoiceNo" name="InvoiceNo" autocomplete="off" disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceDate"
+                                class="form-label">InvoiceDate</label> <input type="date" class="form-control"
+                                id="HtmlId-InvoiceDate" name="InvoiceDate" disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceStateCode"
+                                class="form-label">InvoiceStateCode</label> <input type="text" class="form-control"
+                                id="HtmlId-InvoiceStateCode" name="InvoiceStateCode" autocomplete="off" value="37"
+                                disabled>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="alert alert-danger" role="alert" id="DeleteAlertId" style="display: none;">A simple
+                        danger alert—check it out!</div>
+                    <table id="table" class="table table-bordered table-striped" data-show-footer="true"
+                        data-toolbar="#toolbar">
+                        <thead>
+                            <tr>
+                                <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+                                <th data-field="ItemName" data-width="200" data-type="text">ItemName</th>
+                                <th data-field="Rate" data-type="number">Rate</th>
+                                <th data-field="Qty" data-type="number">Qty</th>
+                                <th data-field="Amount" data-type="number">Amount</th>
+                                <th data-field="FK" data-type="number">FK</th>
+                                <th data-field="KS-Delete">Options</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <th><input class="form-control" id="HtmlId-ItemName" name="ItemName" autocomplete="off"
+                                        autofocus>
+                                    <div class="invalid-feedback"></div>
+                                </th>
+                                <th><input type="number" class="form-control" id="HtmlId-Rate" name="Rate"
+                                        autocomplete="off">
+                                    <div class="invalid-feedback"></div>
+                                </th>
+                                <th><input type="number" class="form-control" id="HtmlId-Qty" name="Qty"
+                                        autocomplete="off">
+                                    <div class="invalid-feedback"></div>
+                                </th>
+                                <th><input type="number" class="form-control" id="HtmlId-Amount" name="Amount"
+                                        autocomplete="off">
+                                    <div class="invalid-feedback"></div>
+                                </th>
+                                <th><input class="form-control" id="HtmlId-FK" name="FK" autocomplete="off">
+                                    <div class="invalid-feedback"></div>
+                                </th>
+                                <th><button class="btn btn-sm btn-success save-btn" id="TableFooterSaveButtonId"
+                                        data-index="">Save</button></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {{> _footer path="../.."}}
+
+        {{> Scripts/_scripts}}
+
+        <script>
+            window.RupeeFormatter = (value) => {
+                if (value === null || value === undefined || value === '') return '';
+                return `₹ ${parseFloat(value).toFixed(2)}`;
+            };
+
+            window.GlobalSerialFormatter = (value, row, index) => {
+                return index + 1;
+            };
+
+        </script>
+
+        <script type="module" src="../../Js/MultiTable/Index/entryFile.js"></script>
+    </main>
+
+</body>
+
+</html>

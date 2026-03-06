@@ -1,0 +1,179 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "ShowAll",
+        "DisplayName": "ShowAll",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "AsIs",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWS",
+                "DisplayName": "ShowWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showWSAndPage",
+                "DisplayName": "showWSAndPage",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showNoBreadcrumb",
+                "DisplayName": "No Breadcrumb",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "noBCWithPk",
+                "DisplayName": "noBCWithPk",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "noBCWithPkAndTS",
+                "DisplayName": "noBCWithPkAndTS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "table",
+        "DisplayName": "Table",
+        "IconClass": "bi bi-table",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "totals",
+        "DisplayName": "Totals",
+        "IconClass": "bi bi-calculator",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "totalsSum",
+                "DisplayName": "Summary",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "balance",
+        "DisplayName": "Balance",
+        "IconClass": "bi bi-bootstrap",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "balanceSimple",
+                "DisplayName": "Simple",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "filter",
+        "DisplayName": "FilterShow",
+        "IconClass": "bi bi-funnel",
+        "SpanClass": "text-secondary",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "filterAccountNameShow",
+                "DisplayName": "AccountName",
+                "IconClass": "bi bi-person-lines-fill",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "filterAccountWithBalance",
+                "DisplayName": "AccountWithBalance",
+                "IconClass": "bi bi-cash-coin",
+                "SpanClass": "text-info"
+            }
+        ]
+    },
+    {
+        "Name": "ListAll",
+        "DisplayName": "Link",
+        "IconClass": "bi bi-whatsapp",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "link",
+                "DisplayName": "link",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "linkAndPage",
+                "DisplayName": "linkAndPage",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "linkDirect",
+                "DisplayName": "Link Direct",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "linkToWa",
+                "DisplayName": "linkToWa",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "ImageAll",
+        "DisplayName": "Image",
+        "IconClass": "bi bi-image",
+        "SpanClass": "text-warning",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "image",
+                "DisplayName": "image",
+                "IconClass": "bi bi-image",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "Sort",
+        "DisplayName": "Sort",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "sortAsIs",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "sortWSAndPage",
+                "DisplayName": "WSAndPage",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    }
+]

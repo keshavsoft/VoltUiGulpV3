@@ -1,0 +1,215 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "show",
+        "DisplayName": "ShowAll",
+        "IconClass": "bi bi-eye",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "showAsIs",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "showGroupBy",
+                "DisplayName": "GroupBy",
+                "IconClass": "bi bi-diagram-3",
+                "SpanClass": "text-warning"
+            },
+            {
+                "SubItemName": "showWS",
+                "DisplayName": "WithSerial",
+                "IconClass": "bi bi-globe2",
+                "SpanClass": "text-danger"
+            },
+            {
+                "SubItemName": "showWSAndPage",
+                "DisplayName": "Serial & Page",
+                "IconClass": "bi bi-globe2",
+                "SpanClass": "text-danger"
+            }
+        ]
+    },
+    {
+        "Name": "Totals",
+        "DisplayName": "Totals",
+        "IconClass": "bi bi-cloud-plus",
+        "SpanClass": "text-warning",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "showWithTotals",
+                "DisplayName": "WithTotals",
+                "IconClass": "bi bi-graph-up-arrow",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "Balance",
+        "DisplayName": "Balance",
+        "IconClass": "bi bi-duffle",
+        "SpanClass": "text-dark",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerCreateDiff",
+                "DisplayName": "FooterCreateDiff",
+                "IconClass": "bi bi-pencil",
+                "SpanClass": "text-info"
+            }
+        ]
+    },
+    {
+        "Name": "filter",
+        "DisplayName": "FilterShow",
+        "IconClass": "bi bi-file-plus",
+        "SpanClass": "text-secondary",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "filterAccountNameShow",
+                "DisplayName": "AccountName",
+                "IconClass": "bi bi-person-lines-fill",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "filterCreditShow",
+                "DisplayName": "Credit",
+                "IconClass": "bi bi-cash-coin",
+                "SpanClass": "text-info"
+            },
+            {
+                "SubItemName": "filterDebitShow",
+                "DisplayName": "Debit",
+                "IconClass": "bi bi-credit-card",
+                "SpanClass": "text-danger"
+            }
+        ]
+    },
+    {
+        "Name": "Create",
+        "DisplayName": "Create",
+        "IconClass": "bi bi-pencil-fill",
+        "SpanClass": "text-dark",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "createFooterWT",
+                "DisplayName": "CreateFooterWT",
+                "IconClass": "bi bi-pencil-fill",
+                "SpanClass": "text-dark"
+            },
+            {
+                "SubItemName": "createFooterWS",
+                "DisplayName": "CreateFooterWS",
+                "IconClass": "bi bi-braces-asterisk",
+                "SpanClass": "text-warning"
+            },
+            {
+                "SubItemName": "verticalCreate",
+                "DisplayName": "VerticalCreate",
+                "IconClass": "bi bi-layout-sidebar",
+                "SpanClass": "text-info"
+            }
+        ]
+    },
+    {
+        "Name": "groupBy",
+        "DisplayName": "Group By",
+        "IconClass": "bi bi-collection",
+        "SpanClass": "text-dark",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "groupByColumn",
+                "DisplayName": "AsIs",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "groupByCount",
+                "DisplayName": "Count",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "alter",
+        "DisplayName": "Alter",
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "alterWs",
+                "DisplayName": "Column",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "alterTotals",
+                "DisplayName": "Totals",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "alterDiff",
+                "DisplayName": "Diff",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "delete",
+        "DisplayName": "Delete",
+        "IconClass": "bi bi-trash",
+        "SpanClass": "text-danger",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "delete",
+                "DisplayName": "Delete",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "deleteTotals",
+                "DisplayName": "Totals",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "deleteDiff",
+                "DisplayName": "Diff",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "download",
+        "DisplayName": "Download",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "downloadAll",
+                "DisplayName": "All",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    }
+]

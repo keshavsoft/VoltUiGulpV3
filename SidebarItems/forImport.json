@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "fromExcel",
+        "DisplayName": "FromExcel",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "fromExcelWithExclude",
+        "DisplayName": "ExcelWithExclude",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "fromExcelWithExcAllCols",
+        "DisplayName": "ExcelWithExcAllColumns",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success"
+    },
+    {
+        "Name": "updateBulkByPk",
+        "DisplayName": "updateBulkByPk",
+        "IconClass": "bi bi-download",
+        "SpanClass": "text-success"
+    }
+]

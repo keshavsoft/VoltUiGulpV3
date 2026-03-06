@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+     {
+        "Name": "V1",
+        "DisplayName": "V1",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "V2",
+        "DisplayName": "V2",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "DLV3",
+        "DisplayName": "V3",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "DLV4",
+        "DisplayName": "V4",
+        "IconClass": "bi bi-table",
+        "SpanClass": "text-danger"
+    }
+]

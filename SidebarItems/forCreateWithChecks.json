@@ -1,0 +1,74 @@
+[
+    {
+        "Name": "index",
+        "DisplayName": "DashBoard",
+        "IconClass": "bi bi-speedometer2",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "Create",
+        "DisplayName": "Create",
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerWSWidths",
+                "DisplayName": "Serial Widths",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "footerWS",
+                "DisplayName": "footerWS",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            },
+            {
+                "SubItemName": "footerWT",
+                "DisplayName": "footerWT",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    },
+    {
+        "Name": "vertical",
+        "DisplayName": "vertical",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "verticalAlert",
+        "DisplayName": "verticalAlert",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "verticalWithDate",
+        "DisplayName": "verticalWithDate",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "verticalWithImage",
+        "DisplayName": "VerticalWithImage",
+        "IconClass": "bi bi-pen",
+        "SpanClass": "text-danger"
+    },
+    {
+        "Name": "footer",
+        "DisplayName": "Footer",
+        "IconClass": "bi bi-pencil-square",
+        "SpanClass": "text-success",
+        "isCollapsable": true,
+        "SubItems": [
+            {
+                "SubItemName": "footerCreateWithDelete",
+                "DisplayName": "With Delete",
+                "IconClass": "bi bi-eye",
+                "SpanClass": "text-success"
+            }
+        ]
+    }
+]
