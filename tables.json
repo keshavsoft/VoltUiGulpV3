@@ -42,6 +42,49 @@
                     "Pipe"
                 ]
             }
+        },
+        {
+            "tableName": "LedgerNames",
+            "columns": [
+                {
+                    "field": "LedgerName",
+                    "title": "LedgerName",
+                    "unique": true,
+                    "type": "text",
+                    "isInput": true,
+                    "isAutoFocus": true,
+                    "defaultvalue": "KeshavSoft"
+                },
+                {
+                    "field": "LedgerParentName",
+                    "title": "LedgerParentName",
+                    "type": "text",
+                    "isInput": true
+                },
+                {
+                    "field": "LedgerType",
+                    "title": "LedgerType",
+                    "type": "text",
+                    "isInput": true
+                }
+            ],
+            "data": [],
+            "Vertical": [],
+            "DataTableOptions": {
+                "Header": {
+                    "autoFocus": "title"
+                }
+            },
+            "SubRoutes": [
+                "Read",
+                "Insert"
+            ],
+            "NonSecured": {
+                "SubRoutes": [
+                    "Read",
+                    "Pipe"
+                ]
+            }
         }
     ]
 }

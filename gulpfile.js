@@ -29,8 +29,6 @@ var rename = require('gulp-rename');
 
 const fse = require("fs-extra");
 const { options: optionsObject } = require("./options");
-// const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/entryFile");
-const { StartFunc: StartFuncFromDistForProtected } = require("./GulpCode/ToDist/entryFile");
 const { StartFunc: StartFuncFromUnProtected } = require("./GulpCode/RunLast/UnProtected/entryFile");
 
 const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/V1/entryFile");
@@ -44,14 +42,6 @@ const CommonTables = require("./tables.json");
 
 // Define paths
 const paths = {
-    distForProtected: {
-        base: "./distForProtected/",
-        css: "./distForProtected/css",
-        html: "./distForProtected/pages",
-        assets: "./distForProtected/assets",
-        img: "./distForProtected/assets/img",
-        vendor: "./distForProtected/vendor",
-    },
     dist: {
         base: "./dist/",
         css: "./dist/css",
@@ -92,7 +82,8 @@ const paths = {
     },
 };
 
-var templateData = StartFuncFromForTemplateData({ inCommonColumns: CommonColumns });
+// var templateData = StartFuncFromForTemplateData({ inCommonColumns: CommonColumns });
+var templateData;
 
 // Gulp tasks
 
@@ -286,36 +277,47 @@ gulp.task("copy:dist:html:index", function () {
 });
 
 gulp.task("end:dist", async () => {
-    fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+    // fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
 
     // LocalFuncChangeJsConfig({ inDistPath: paths.dist.base });
-    StartFuncFromUnProtected({
-        inDistPath: paths.dist.base,
-        inCommonColumns: CommonColumns
-    });
+    // StartFuncFromUnProtected({
+    //     inDistPath: paths.dist.base,
+    //     inCommonColumns: CommonColumns
+    // });
 
     return await true;
 });
+
 gulp.task("generate:tables", (done) => {
     const runNext = (i) => {
         if (i >= CommonTables.tables.length) return done();
 
-        buildForTable(CommonTables.tables[i].tableName, () => runNext(i + 1));
+        buildForTable(CommonTables.tables[i], () => runNext(i + 1));
     };
 
     runNext(0);
 });
 
-function buildForTable(table, done) {
+function buildForTable(inTableSchema, done) {
+    const table = inTableSchema.tableName;
+
     paths.dist.base = `./dist/${table}/`;
     paths.dist.css = `./dist/${table}/css`
-    paths.dist.html = `/dist/${table}/pages`;
+    paths.dist.html = `./dist/${table}/pages`;
     paths.dist.assets = `./dist/${table}/assets`;
-    paths.dist.img = `/dist/${table}/assets/img`;
+    paths.dist.img = `./dist/${table}/assets/img`;
     paths.dist.vendor = `./dist/${table}/vendor`;
 
+    templateData = StartFuncFromForTemplateData({ inCommonColumns: inTableSchema });
+
+    fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+
+    StartFuncFromUnProtected({
+        inDistPath: paths.dist.base,
+        inCommonColumns: inTableSchema
+    });
+
     return gulp.series(
-        "clean:dist",
         "copy:dist:css",
         "copy:dist:html",
         "copy:dist:html:index",
@@ -323,8 +325,7 @@ function buildForTable(table, done) {
         "minify:css",
         "minify:html",
         "minify:html:index",
-        "copy:dist:vendor",
-        "end:dist"
+        "copy:dist:vendor"
     )(done);
 };
 
