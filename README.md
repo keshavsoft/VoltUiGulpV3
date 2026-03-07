@@ -233,3 +233,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.6
 
 - MultiTableV2 started
+
+### 1.1.7
+
+- MultiTableV2 grid save to server working

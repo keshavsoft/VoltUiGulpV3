@@ -1,6 +1,7 @@
 {
     "TableName": "/$ApiVersion/$TableName",
     "OnlyTableName": "$TableName",
+    "StartApi": "$ApiVersion",
     "showFooter": true,
     "toolbar": "#toolbar",
     "searchable": true,
