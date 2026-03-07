@@ -225,3 +225,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.4
 
 - config json, api removed
+
+### 1.1.5
+
+- schema json and used removed

@@ -36,8 +36,6 @@ const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTempl
 var dotenv = require("dotenv");
 dotenv.config();
 
-// Load and enhance schema.json
-const CommonColumns = require("./schema.json");
 const CommonTables = require("./tables.json");
 
 // Define paths
@@ -82,7 +80,6 @@ const paths = {
     },
 };
 
-// var templateData = StartFuncFromForTemplateData({ inCommonColumns: CommonColumns });
 var templateData;
 
 // Gulp tasks
