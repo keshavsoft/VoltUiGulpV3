@@ -229,3 +229,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.5
 
 - schema json and used removed
+
+### 1.1.6
+
+- MultiTableV2 started
