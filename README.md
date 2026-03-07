@@ -221,3 +221,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.3
 
 - perfect with 2 tables and js files also, now need to connect with backend
+
+### 1.1.4
+
+- config json, api removed
