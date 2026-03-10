@@ -249,3 +249,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.10
 
 - gulfile better and debug added by vscode folder
+
+### 1.1.11
+
+- gulfile perfect for apiversion

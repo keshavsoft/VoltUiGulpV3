@@ -55,9 +55,14 @@ const LocalDefaultFunc = ({ inDistPath, inCommonColumns }) => {
     const contentAsJson = JSON.parse(content);
 
     contentAsJson.columns = CommonColumns.columns;
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
-    contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
-    contentAsJson.StartApi = CommonVersionCode;
+    contentAsJson.TableName = `/${process.env.VERSION}/${CommonColumns.tableName}`;
+
+    // contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
+    // contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
+
+    contentAsJson.StartApi = process.env.VERSION;
+
+    contentAsJson.OnlyTableName = CommonColumns.tableName;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
 
