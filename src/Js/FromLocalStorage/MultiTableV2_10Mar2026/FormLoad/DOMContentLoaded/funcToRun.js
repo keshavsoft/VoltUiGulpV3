@@ -11,14 +11,14 @@ const getInRowPkFromSearchParams = () => {
 
 const StartFunc = () => {
     const LocalInRowPk = getInRowPkFromSearchParams();
-// debugger;
+debugger;
     LocalFunc();
     StartFuncFromAddListeners();
     StartFuncFromBuildBSTables();
     StartFuncFromShowOnDom();
     StartFuncForEnterKeyCalculation();
 
-    FetchAsGet();
+    FetchAsGet({ inRowPk: LocalInRowPk });
 };
 
 const LocalFunc = () => {

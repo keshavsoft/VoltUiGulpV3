@@ -12,6 +12,7 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
 
     contentAsJson.columns = CommonColumns.columns;
     contentAsJson.TableName = `/${process.env.VERSION}/${CommonColumns.tableName}`;
+    contentAsJson.StartApi = process.env.VERSION;
 
     contentAsJson.Protected.RedirectUrl = contentAsJson.Protected.RedirectUrl3;
 

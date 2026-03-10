@@ -33,7 +33,7 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
     contentAsJson.OnlyTableName = CommonColumns.tableName;
-    contentAsJson.ApiVersion = CommonVersionCode;
+    contentAsJson.StartApi = CommonVersionCode;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
     contentAsJson.ForeignkeyTables = CommonColumns.ForeignkeyTables;
@@ -43,20 +43,6 @@ const StartFunc = ({ inDistPath, inCommonColumns }) => {
 };
 
 const LocalDefaultFunc = ({ inDistPath, inCommonColumns }) => {
-    const LocalRepoType = process.env.RepoType;
-
-    switch (LocalRepoType) {
-        case "GenWMailAndWs":
-            StartFuncFromForGenWMailAndWs();
-            break;
-        case "GenWMailAndWs":
-            StartFuncFromForGenWMailAndWs();
-            break;
-
-        default:
-            break;
-    };
-
     const CommonVersionCode = "$ApiVersion";
     const CommonTableNameCode = "$TableName";
     const CommonColumns = inCommonColumns;
@@ -71,6 +57,7 @@ const LocalDefaultFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.columns = CommonColumns.columns;
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonTableNameCode, CommonColumns.tableName);
     contentAsJson.TableName = contentAsJson.TableName.replace(CommonVersionCode, `${process.env.VERSION}`);
+    contentAsJson.StartApi = CommonVersionCode;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
 

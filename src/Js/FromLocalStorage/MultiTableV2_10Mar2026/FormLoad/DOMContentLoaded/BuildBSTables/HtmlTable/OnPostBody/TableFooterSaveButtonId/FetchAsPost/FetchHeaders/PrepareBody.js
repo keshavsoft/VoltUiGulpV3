@@ -1,5 +1,3 @@
-import commonConfigJson from "../../../../../../../../config.json" with { type: "json" };
-
 const StartFunc = ({ inCurrentTarget }) => {
     const jVarLocalCurrentTarget = inCurrentTarget;
     const jVarLocalClosestForm = jVarLocalCurrentTarget.closest("tr");
@@ -8,13 +6,7 @@ const StartFunc = ({ inCurrentTarget }) => {
 
     let jVarLocalPostObject = jFLocalPreparePostBody({ inQuerySelectorAll: jVarLocalInputs });
 
-    const parentValue =
-        new URLSearchParams(window.location.search)
-            .get(commonConfigJson.Parent.UrlParam);
-
-    jVarLocalPostObject[commonConfigJson.Parent.BodyKey] = parentValue;
-
-    return JSON.stringify(jVarLocalPostObject);
+    return jVarLocalPostObject
 };
 
 const jFLocalPreparePostBody = ({ inQuerySelectorAll }) => {
@@ -29,7 +21,7 @@ const jFLocalPreparePostBody = ({ inQuerySelectorAll }) => {
 
     });
 
-    return jVarLocalReturnObject;
+    return JSON.stringify(jVarLocalReturnObject);
 };
 
 export { StartFunc }

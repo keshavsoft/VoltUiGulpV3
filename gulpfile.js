@@ -273,18 +273,6 @@ gulp.task("copy:dist:html:index", function () {
         .pipe(gulp.dest(paths.dist.base));
 });
 
-gulp.task("end:dist", async () => {
-    // fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
-
-    // LocalFuncChangeJsConfig({ inDistPath: paths.dist.base });
-    // StartFuncFromUnProtected({
-    //     inDistPath: paths.dist.base,
-    //     inCommonColumns: CommonColumns
-    // });
-
-    return await true;
-});
-
 gulp.task("generate:tables", (done) => {
     const runNext = (i) => {
         if (i >= CommonTables.tables.length) return done();
@@ -327,6 +315,5 @@ function buildForTable(inTableSchema, done) {
 };
 
 gulp.task("build:dist", gulp.series("generate:tables"));
-// gulp.task("build:dist", gulp.series("clean:dist", "copy:dist:css", "copy:dist:html", "copy:dist:html:index", "copy:dist:assets", "minify:css", "minify:html", "minify:html:index", "copy:dist:vendor", "end:dist"));
 
 gulp.task("default", gulp.series("serve"));

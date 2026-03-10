@@ -241,3 +241,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.8
 
 - common ShowAll end poing
+
+### 1.1.9
+
+- still working on configjson apiversion, not fixed
