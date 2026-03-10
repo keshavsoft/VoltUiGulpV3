@@ -65,6 +65,8 @@ const LocalDefaultFunc = ({ inDistPath, inCommonColumns }) => {
     contentAsJson.OnlyTableName = CommonColumns.tableName;
 
     contentAsJson.DataTableOptions = CommonColumns.DataTableOptions;
+    contentAsJson.ForeignkeyTables = CommonColumns.ForeignkeyTables;
+    contentAsJson.DependantTables = CommonColumns.DependantTables;
 
     fs.writeFileSync(filePath, JSON.stringify(contentAsJson), 'utf-8');
 };
