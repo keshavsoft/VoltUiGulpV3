@@ -245,3 +245,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.9
 
 - still working on configjson apiversion, not fixed
+
+### 1.1.10
+
+- gulfile better and debug added by vscode folder

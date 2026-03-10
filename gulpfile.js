@@ -47,6 +47,7 @@ const paths = {
         assets: "./dist/assets",
         img: "./dist/assets/img",
         vendor: "./dist/vendor",
+        tableSchema: ""
     },
     dev: {
         base: "./html&css/",
@@ -292,15 +293,16 @@ function buildForTable(inTableSchema, done) {
     paths.dist.assets = `./dist/${table}/assets`;
     paths.dist.img = `./dist/${table}/assets/img`;
     paths.dist.vendor = `./dist/${table}/vendor`;
+    paths.dist.tableSchema = inTableSchema;
 
     templateData = StartFuncFromForTemplateData({ inCommonColumns: inTableSchema });
 
-    fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+    // fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
 
-    StartFuncFromUnProtected({
-        inDistPath: paths.dist.base,
-        inCommonColumns: inTableSchema
-    });
+    // StartFuncFromUnProtected({
+    //     inDistPath: paths.dist.base,
+    //     inCommonColumns: inTableSchema
+    // });
 
     return gulp.series(
         "copy:dist:css",
@@ -310,8 +312,20 @@ function buildForTable(inTableSchema, done) {
         "minify:css",
         "minify:html",
         "minify:html:index",
-        "copy:dist:vendor"
+        "copy:dist:vendor",
+        runUnProtected
     )(done);
+};
+
+const runUnProtected = (done) => {
+    fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
+
+    StartFuncFromUnProtected({
+        inDistPath: paths.dist.base,
+        inCommonColumns: paths.dist.tableSchema
+    });
+
+    done();
 };
 
 gulp.task("build:dist", gulp.series("generate:tables"));
