@@ -2,7 +2,7 @@ import { StartFunc as StartFuncFetchFuncs } from "./PostFetch.js";
 import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/EntryFile.js";
 
 let StartFunc = async (event) => {
-    // debugger;
+    debugger;
     const jVarLocalCurrentTarget = event.currentTarget;
 
     let jVarLocalDataNeeded = await StartFuncFetchFuncs({ inCurrentTarget: jVarLocalCurrentTarget });

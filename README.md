@@ -253,3 +253,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.11
 
 - gulfile perfect for apiversion
+
+### 1.1.12
+
+- MultiTableV2 more perfect in Js
