@@ -54,8 +54,10 @@ const StartFunc = ({ inCommonColumns }) => {
         SideBarItemsForMultiTable: SideBarItemsForMultiTable,
         DependantTables: inCommonColumns.DependantTables,
         SideBarItemsforRelationshipTables: SideBarItemsforRelationshipTables
-
     };
+
+    templateData.PrimarykeyTables = inCommonColumns.PrimarykeyTables;
+    // templateData.Vertical = inCommonColumns.Vertical;
 
     return templateData;
 };

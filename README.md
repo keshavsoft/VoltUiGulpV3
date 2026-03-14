@@ -258,6 +258,6 @@ Instagram: <https://www.instagram.com/themesberg/>
 
 - MultiTableV2 more perfect in Js
 
-### 1.1.13
+### 1.1.14
 
-- toTable as is started
+- multitable still working on vertical...

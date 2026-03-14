@@ -46,82 +46,43 @@
             </a>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <form onsubmit="return false" id="FormId">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerName"
-                                class="form-label">BuyerName</label> <input type="text" class="form-control"
-                                id="HtmlId-BuyerName" name="BuyerName" autocomplete="off" autofocus value="Keshav"
-                                disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerAddress"
-                                class="form-label">BuyerAddress</label> <input type="text" class="form-control"
-                                id="HtmlId-BuyerAddress" name="BuyerAddress" autocomplete="off" autofocus disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-BuyerGST"
-                                class="form-label">BuyerGST</label> <input type="text" class="form-control"
-                                id="HtmlId-BuyerGST" name="BuyerGST" autocomplete="off" autofocus disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceNo"
-                                class="form-label">InvoiceNo</label> <input type="text" class="form-control"
-                                id="HtmlId-InvoiceNo" name="InvoiceNo" autocomplete="off" disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceDate"
-                                class="form-label">InvoiceDate</label> <input type="date" class="form-control"
-                                id="HtmlId-InvoiceDate" name="InvoiceDate" disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 mb-3"><label for="HtmlId-InvoiceStateCode"
-                                class="form-label">InvoiceStateCode</label> <input type="text" class="form-control"
-                                id="HtmlId-InvoiceStateCode" name="InvoiceStateCode" autocomplete="off" value="37"
-                                disabled>
-                            <div class="invalid-feedback"></div>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <div class="alert alert-danger" role="alert" id="DeleteAlertId" style="display: none;">A simple
-                        danger alert—check it out!</div>
-                    <table id="table" class="table table-bordered table-striped" data-show-footer="true"
-                        data-toolbar="#toolbar">
-                        <thead>
-                            <tr>
-                                <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
-
-                                {{#each columns}}
-                                <th data-field="{{field}}" {{#if align}} data-align="{{align}}" {{/if}} {{#if
-                                    filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if
-                                    align}}data-align="{{align}}" {{/if}} {{#if
-                                    showRupee}}data-formatter="window.RupeeFormatter" {{/if}} {{#if (isVisible this)}}
-                                    data-visible={{visible}}{{/if}} {{#if WidthOptions.inPx}}
-                                    data-width="{{WidthOptions.inPx}}" {{/if}} {{#if defaultvalue}}
-                                    data-defaultvalue="{{defaultvalue}}" {{/if}} {{#if type}} data-type="{{type}}"
-                                    {{/if}}>
-
-                                    {{title}}
-                                </th>
-                                {{/each}}
-                                <th data-field="KS-Delete">
-                                    Options
-                                </th>
-
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            {{> ForTable/Footer/_TableFooter}}
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
+        <div class="row">
+            {{> ForTable/Vertical/_loopInputsReadOnly}}
         </div>
+
+        <div class="table-responsive">
+            <div class="alert alert-danger" role="alert" id="DeleteAlertId" style="display: none;">A simple
+                danger alert—check it out!</div>
+            <table id="table" class="table table-bordered table-striped" data-show-footer="true"
+                data-toolbar="#toolbar">
+                <thead>
+                    <tr>
+                        <th data-field="KS-Serial" data-formatter="window.GlobalSerialFormatter">#</th>
+
+                        {{#each columns}}
+                        <th data-field="{{field}}" {{#if align}} data-align="{{align}}" {{/if}} {{#if
+                            filterControl}}data-filter-control="{{filterControl}}" {{/if}} {{#if
+                            align}}data-align="{{align}}" {{/if}} {{#if
+                            showRupee}}data-formatter="window.RupeeFormatter" {{/if}} {{#if (isVisible this)}}
+                            data-visible={{visible}}{{/if}} {{#if WidthOptions.inPx}} data-width="{{WidthOptions.inPx}}"
+                            {{/if}} {{#if defaultvalue}} data-defaultvalue="{{defaultvalue}}" {{/if}} {{#if type}}
+                            data-type="{{type}}" {{/if}}>
+
+                            {{title}}
+                        </th>
+                        {{/each}}
+                        <th data-field="KS-Delete">
+                            Options
+                        </th>
+
+                    </tr>
+                </thead>
+                <tfoot>
+                    {{> ForTable/Footer/_TableFooter}}
+                </tfoot>
+            </table>
+        </div>
+
         {{> _footer path="../.."}}
 
         {{> Scripts/_scripts}}
