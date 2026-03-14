@@ -277,3 +277,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.18
 
 - mutliTableV3 perfect, with new table footer consider ui with considerUi new key in schema
+
+### 1.1.19
+
+- VerticalV2 tested with select when key changed
