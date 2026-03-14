@@ -269,3 +269,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.16
 
 - mutliTableV2 still working on
+
+### 1.1.17
+
+- mutliTableV2 perfect with reload

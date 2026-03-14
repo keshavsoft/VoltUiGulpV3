@@ -6,20 +6,11 @@ import { StartFunc as Status200 } from "./status200.js";
 
 let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponse = await inResponse;
-    debugger;
-    // if (jVarLocalResponse.status === 200) {
-    //     let jVarLocalSavedPk = await jVarLocalResponse.text();
-
-    //     Status200({ inResponse: jVarLocalSavedPk });
-    // };
 
     if (jVarLocalResponse.status === 200) {
-        let jVarLocalRefreshBSTableId = document.querySelector(`.RefreshBSTableClass`);
-        // console.log("jVarLocalRefreshBSTableId : ", jVarLocalRefreshBSTableId);
-
-        jVarLocalRefreshBSTableId.click();
+        let jVarLocalSavedPk = await jVarLocalResponse.text();
+        Status200({ inResponse: jVarLocalSavedPk });
     };
-
 
     // if (jVarLocalResponse.status === 401) {
     //     let jVarLocalSavedPk = await jVarLocalResponse.text();

@@ -4,7 +4,7 @@ let StartFunc = () => {
     let jVarLocalRefreshBSTableId = document.getElementById("TableFooterSaveButtonId");
 
     if (jVarLocalRefreshBSTableId === null === false) {
-        // debugger;
+        debugger;
         jVarLocalRefreshBSTableId.addEventListener("click", StartFuncButtonClickFunc);
     };
 };

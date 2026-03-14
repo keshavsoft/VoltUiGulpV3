@@ -1,7 +1,8 @@
-import { StartFunc as TableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
+// import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
+import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSaveButtonId/EntryFile.js";
 
 let StartFunc = () => {
-    TableFooterSaveButtonId();
+    StartFuncTableFooterSaveButtonId();
     // debugger;
     let $autoFocusInput = $("#table tfoot").find("input[autofocus], select[autofocus], textarea[autofocus]");
     let jVarLocalDataLists = document.querySelectorAll("datalist");

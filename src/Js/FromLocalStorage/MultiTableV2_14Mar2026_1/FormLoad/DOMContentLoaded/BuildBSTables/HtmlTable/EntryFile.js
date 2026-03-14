@@ -5,7 +5,6 @@ const StartFunc = () => {
 
     let LocalConfig = {};
     LocalConfig.onPostBody = StartFuncFromOnPostBody;
-
     $table.bootstrapTable(LocalConfig);
 };
 
