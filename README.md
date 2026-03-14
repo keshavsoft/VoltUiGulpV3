@@ -273,3 +273,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.17
 
 - mutliTableV2 perfect with reload
+
+### 1.1.18
+
+- mutliTableV3 perfect, with new table footer consider ui with considerUi new key in schema
