@@ -31,7 +31,8 @@ const fse = require("fs-extra");
 const { options: optionsObject } = require("./options");
 const { StartFunc: StartFuncFromUnProtected } = require("./GulpCode/RunLast/UnProtected/entryFile");
 
-const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/V1/entryFile");
+// const { StartFunc: StartFuncFromForTemplateData } = require("./GulpCode/ForTemplateData/V1/entryFile");
+const { StartFunc: ForTemplateData } = require("./GulpCode/ForTemplateData/V2/entryFile");
 
 var dotenv = require("dotenv");
 dotenv.config();
@@ -295,14 +296,7 @@ function buildForTable(inTableSchema, done) {
     paths.dist.vendor = `./dist/${table}/vendor`;
     paths.dist.tableSchema = inTableSchema;
 
-    templateData = StartFuncFromForTemplateData({ inCommonColumns: inTableSchema });
-
-    // fse.copySync(`${paths.src.base}/Js`, `${paths.dist.base}/Js`);
-
-    // StartFuncFromUnProtected({
-    //     inDistPath: paths.dist.base,
-    //     inCommonColumns: inTableSchema
-    // });
+    templateData = ForTemplateData({ inCommonColumns: inTableSchema });
 
     return gulp.series(
         "copy:dist:css",

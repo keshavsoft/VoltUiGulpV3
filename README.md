@@ -261,3 +261,7 @@ Instagram: <https://www.instagram.com/themesberg/>
 ### 1.1.14
 
 - multitable still working on vertical...
+
+### 1.1.15
+
+- primary table schema perfectly found
