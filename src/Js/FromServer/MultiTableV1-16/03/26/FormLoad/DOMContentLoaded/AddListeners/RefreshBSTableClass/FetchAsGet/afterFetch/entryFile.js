@@ -6,8 +6,8 @@ import { StartFunc as Status401 } from "./status401.js";
 let StartFunc = async ({ inResponse }) => {
     let jVarLocalResponse = await inResponse;
 
-    if (jVarLocalResponse.status === 200) {
-        let jVarLocalDataAsJson = await jVarLocalResponse.json();
+    if (jVarLocalResponse) {
+        let jVarLocalDataAsJson = jVarLocalResponse
         Status200({ inResponseAsJson: jVarLocalDataAsJson });
     };
 

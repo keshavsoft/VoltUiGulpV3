@@ -1,14 +1,9 @@
-import { StartFunc as ForTotals } from "../ForTotals/entryFile.js";
+import { StartFunc as StartFunctoInputValues } from "./toInputValues.js";
+import { StartFunc as StartFunctoSubTable } from "./toSubTable.js";
 
 let StartFunc = ({ inResponseAsJson }) => {
-    
-    var $table = $('#table');
-
-    $table.bootstrapTable("load", inResponseAsJson);
-    let columns = $table.bootstrapTable('getOptions').columns[0];
-
-    ForTotals({ inColumns: columns, inData: inResponseAsJson });
-
+    StartFunctoInputValues({ inResponseAsJson });
+    StartFunctoSubTable({ inResponseAsJson: inResponseAsJson.ForeignkeyTableData });
 };
 
 export { StartFunc };

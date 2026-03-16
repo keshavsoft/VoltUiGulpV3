@@ -1,14 +1,13 @@
 import { StartFunc as Status200 } from "./status200.js";
 import { StartFunc as Status409 } from "./status409.js";
-import { StartFunc as Status401 } from "./status401.js";
-// import { StartFunc as Status404 } from "./status404.js";
+import { StartFunc as StartFuncFromStatus401 } from "./status401.js";
 
-let StartFunc = async ({ inResponse }) => {
+let StartFunc = async ({ inResponse, inTableName }) => {
     let jVarLocalResponse = await inResponse;
 
     if (jVarLocalResponse.status === 200) {
         let jVarLocalDataAsJson = await jVarLocalResponse.json();
-        Status200({ inResponseAsJson: jVarLocalDataAsJson });
+        Status200({ inResponseAsJson: jVarLocalDataAsJson, inTableName });
     };
 
     if (jVarLocalResponse.status === 409) {
@@ -17,14 +16,9 @@ let StartFunc = async ({ inResponse }) => {
     };
 
     if (jVarLocalResponse.status === 401) {
-        let jVarLocalSavedPk = await jVarLocalResponse.text();
-        Status401({ inResponse: jVarLocalSavedPk });
+        let jVarLocalJsonResponse = await jVarLocalResponse.json();
+        StartFuncFromStatus401({ inResponse: jVarLocalJsonResponse });
     };
-
-    // if (jVarLocalResponse.status === 404) {
-    //     let jVarLocalSavedPk = await jVarLocalResponse.text();
-    //     Status404({ inResponse: jVarLocalSavedPk });
-    // };
 };
 
 export { StartFunc };

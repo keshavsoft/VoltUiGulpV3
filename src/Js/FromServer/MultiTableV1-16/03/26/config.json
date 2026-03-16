@@ -1,0 +1,6 @@
+{
+    "Parent": {
+        "UrlParam": "inRowPk",
+        "BodyKey": "ParentPk"
+    }
+}
