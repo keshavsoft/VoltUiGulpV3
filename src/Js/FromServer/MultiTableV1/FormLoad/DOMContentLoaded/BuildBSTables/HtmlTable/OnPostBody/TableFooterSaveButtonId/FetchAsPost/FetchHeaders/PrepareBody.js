@@ -12,7 +12,7 @@ const StartFunc = ({ inCurrentTarget }) => {
         new URLSearchParams(window.location.search)
             .get(commonConfigJson.Parent.UrlParam);
 
-    jVarLocalPostObject[commonConfigJson.Parent.BodyKey] = parentValue;
+    jVarLocalPostObject[commonConfigJson.Parent.BodyKey] = parseInt(parentValue);
 
     return JSON.stringify(jVarLocalPostObject);
 };

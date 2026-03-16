@@ -2,7 +2,6 @@ import { StartFunc as StartFuncFromAddListeners } from "./AddListeners/entryFile
 import { StartFunc as StartFuncFromBuildBSTables } from "./BuildBSTables/entryFile.js";
 import { StartFunc as StartFuncFromShowOnDom } from "./showOnDom.js";
 import { StartFunc as StartFuncForEnterKeyCalculation } from "./ForEnterKeyCalculation/entryFie.js";
-import { StartFunc as FetchAsGet } from "./FetchAsGet/entryFile.js";
 
 const getInRowPkFromSearchParams = () => {
     const params = new URLSearchParams(window.location.search);
@@ -17,7 +16,6 @@ const StartFunc = () => {
     LocalFunc();
     StartFuncFromShowOnDom();
     StartFuncForEnterKeyCalculation();
-    FetchAsGet();
 };
 
 const LocalFunc = () => {
